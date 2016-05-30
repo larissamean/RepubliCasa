@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>RepubliCasa | Dashboard</title>
+  <title>RepubliCasa | Cadastro de República</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -63,7 +63,7 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">CADASTROS</li>
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
             <i class="fa fa-plus-square"></i> <span>Cadastros</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -77,7 +77,7 @@
         </li>
 
         <li class="header">TAREFAS</li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Tarefas</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -107,10 +107,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Autenticação do Usuário
+        Cadastro de República
       </h1>
       <ol class="breadcrumb">
-        <li class="active"><a href="#"><i class="fa fa-dashboard"></i>Index</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i>Index</a></li>
+        <li><a href="#">Cadastros</a></li>
+        <li class="active">Cadastro de República</li>
       </ol>
     </section>
 
@@ -121,24 +123,22 @@
   <div class="col-md-6">
     <!-- general form elements -->
     <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Adicionar República</h3>
+      </div>
       <!-- /.box-header -->
       <!-- form start -->
-      <form role="form">
+      <form action="ListaRepublicas.html" method="post">
         <div class="box-body">
           <div class="form-group">
-            <label for="exampleInputEmail1">Endereço de Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label for="inputNomeRepublica">Nome</label>
+            <input type="text" class="form-control" id="inputNomeRepublica" placeholder="Nome">
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-
         </div>
         <!-- /.box-body -->
 
         <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Logar</button>
+          <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
       </form>
     </div>

@@ -13,7 +13,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -68,11 +68,11 @@
             <i class="fa fa-plus-square"></i> <span>Cadastros</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-              <li><a href="CadastroCategoriaTarefas.html"><i class="fa fa-circle-o"></i>Categoria de tarefas</a></li>
-              <li><a href="CadastroCategoriaDespesas.html"><i class="fa fa-circle-o"></i>Categoria de despesas</a></li>
-              <li><a href="CadastroGrupos.html"><i class="fa fa-circle-o"></i>Grupos</a></li>
-              <li><a href="CadastroPessoa.html"><i class="fa fa-circle-o"></i>Pessoas</a></li>
-              <li class="active"><a href="ListaRepublicas.html"><i class="fa fa-circle-o"></i>República</a></li>
+              <li class="active"><a href="lista-categorias-tarefa.html"><i class="fa fa-circle-o"></i>Categoria de tarefas</a></li>
+              <li><a href="lista-categorias-despesa.html"><i class="fa fa-circle-o"></i>Categoria de despesas</a></li>
+              <li><a href="lista-grupos.html"><i class="fa fa-circle-o"></i>Grupos</a></li>
+              <li><a href="lista-pessoas.html"><i class="fa fa-circle-o"></i>Pessoas</a></li>
+              <li><a href="lista-republicas.html"><i class="fa fa-circle-o"></i>República</a></li>
           </ul>
         </li>
 
@@ -116,36 +116,72 @@
       </ol>
     </section>
 
-    <!-- Main content -->
-<section class="content">
-  <div class="row">
-  <!-- left column -->
-  <div class="col-md-6">
-    <!-- general form elements -->
-    <div class="box box-primary">
-      <div class="box-header with-border">
-        <h3 class="box-title">Adicionar República</h3>
-      </div>
-      <!-- /.box-header -->
-      <!-- form start -->
-      <form action="ListaRepublicas.html" method="post">
-        <div class="box-body">
-          <div class="form-group">
-            <label for="inputNomeRepublica">Nome</label>
-            <input type="text" class="form-control" id="inputNomeRepublica" placeholder="Nome">
-          </div>
-        </div>
-        <!-- /.box-body -->
 
-        <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Salvar</button>
+
+
+    <!-- Main content -->
+    <section class="content">
+
+
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Lista de Repúblicas</h3>
+
+            </div>
+
+            <!-- /.box-header -->
+            <div class="box-body">
+
+              <div>
+
+                <button type="submit" class="btn  btn-success" onclick="location.href='cadastro-republica.html'" >Adicionar</button>
+              </div>
+              <table id="lista" class="table table-bordered table-striped">
+                <thead>
+                    <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>República 1</td>
+                      <td>
+                        <button type="button" class="btn  btn-success">Editar</button>
+                        <button type="button" class="btn  btn-danger">Excluir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>República 2</td>
+                      <td>
+                        <button type="button" class="btn  btn-success">Editar</button>
+                        <button type="button" class="btn  btn-danger">Excluir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>República 3</td>
+                      <td>
+                        <button type="button" class="btn  btn-success">Editar</button>
+                        <button type="button" class="btn  btn-danger">Excluir</button>
+                      </td>
+                    </tr>
+
+                  </tfoot>
+                </table>
+
+              </div>
+      <!-- /.box-body -->
+
         </div>
-      </form>
-    </div>
     <!-- /.box -->
 
       </div>
       <!-- /.box-body -->
+
+
     </div>
 
 </section>
@@ -173,5 +209,24 @@
 <script src="dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+
+<script>
+  $(function () {
+    $('#lista').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 </body>
-    </html>
+</html>
