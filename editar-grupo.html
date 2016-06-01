@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>RepubliCasa | Cadastro de Categoria de Despesas</title>
+  <title>RepubliCasa | Editar Grupo</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -13,13 +13,17 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
 
+  <!-- Select2 -->
+  <script src="plugins/select2/select2.full.min.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -197,14 +201,14 @@
           </a>
           <ul class="treeview-menu">
               <li><a href="lista-categoria-atividades.html"><i class="fa fa-circle-o"></i>Categoria de Atividades</a></li>
-              <li class="active"><a href="lista-categorias-despesa.html"><i class="fa fa-circle-o"></i>Categoria de despesas</a></li>
-              <li><a href="lista-grupos.html"><i class="fa fa-circle-o"></i>Grupos</a></li>
+              <li><a href="lista-categorias-despesa.html"><i class="fa fa-circle-o"></i>Categoria de despesas</a></li>
+              <li class="active"><a href="lista-grupos.html"><i class="fa fa-circle-o"></i>Grupos</a></li>
               <li><a href="lista-pessoas.html"><i class="fa fa-circle-o"></i>Pessoas</a></li>
               <li><a href="lista-republicas.html"><i class="fa fa-circle-o"></i>República</a></li>
           </ul>
         </li>
 
-    <li class="header">LANÇAMENTOS</li>
+      <li class="header">LANÇAMENTOS</li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-calendar"></i> <span>Tarefas</span> <i class="fa fa-angle-left pull-right"></i>
@@ -244,73 +248,83 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Cadastro de Categoria de Despesa
+        Cadastro de Grupo
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-calendar"></i>Index</a></li>
         <li><a href="#">Cadastros</a></li>
-        <li class="active">Cadastro de Categoria de Despesas</li>
+        <li class="active">Cadastro de Grupo</li>
       </ol>
     </section>
 
-
-
-
     <!-- Main content -->
-    <section class="content">
+<section class="content">
+  <div class="row">
+  <!-- left column -->
+  <div class="col-md-6">
+    <!-- general form elements -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Editar Grupo</h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form action="lista-grupos.html" method="post">
+        <div class="box-body">
+          <div class="form-group">
+            <label for="inputNomeRepublica">Nome</label>
+            <input type="text" class="form-control" id="inputNomeRepublica" value="Republica SemNome">
+          <div>
+          </div>
+            <label for="selectPessoa">Participantes</label>
+            <select id="selectPessoa" class="form-control select2" multiple="multiple" data-placeholder="Letícia Nunes" style="width: 100%;">
+              <option>Philippe Borges Ruiz Lopes</option>
+              <option>Larissa Angélica</option>
+              <option>Gleibson</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" style="width:100%">Adicionar</button>
+          </div>
+          <div class="form-group">
+            <table id="lista" class="table table-bordered table-striped" >
+              <thead>
+                  <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                  </tr>
+                  <tr>
+                    <td>Letícia Nunes</td>
+                    <td>leticia_nb1@hotmail.com</td>
+                  </tr>
+                  </thead>
+                <tbody>
+                  <tr>
+                    <td align="center" valign="top" style="height: 100%; padding-bottom: 15px;">
+                        &nbsp;
+                    </td>
+                    <td align="center" valign="top" style="height: 100%; padding-bottom: 15px;">
+                        &nbsp;
+                    </td>
+                  </tr>
+                </tfoot>
 
-
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Lista de Categoria de Despesa</h3>
-
-            </div>
-
-            <!-- /.box-header -->
-            <div class="box-body">
-
-              <div>
-
-                <button type="submit" class="btn  btn-success" onclick="location.href='cadastro-categoria-despesa.html'" >Adicionar</button>
-              </div>
-              <table id="lista" class="table table-bordered table-striped">
-                <thead>
-                    <thead>
-                    <tr>
-                      <th>Nome</th>
-                      <th width="20%">Ações</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td>Mensais</td>
-                      <td>
-                        <button type="submit" class="btn  btn-success" onclick="location.href='editar-categoria-despesa.html'" >Editar</button>
-                        <button type="button" class="btn  btn-danger">Excluir</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Ocasionais</td>
-                      <td>
-                        <button type="submit" class="btn  btn-success" onclick="location.href='editar-categoria-despesa.html'" >Editar</button>
-                        <button type="button" class="btn  btn-danger">Excluir</button>
-                      </td>
-                    </tr>
-                  </tfoot>
-                </table>
-
-              </div>
-      <!-- /.box-body -->
+              </table>
+          </div>
 
         </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
     <!-- /.box -->
 
       </div>
       <!-- /.box-body -->
-
-
     </div>
 
 </section>
@@ -339,23 +353,5 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 
-<!-- DataTables -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-
-<script>
-  $(function () {
-    $('#lista').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
-</script>
 </body>
-</html>
+    </html>
