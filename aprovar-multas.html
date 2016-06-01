@@ -28,7 +28,7 @@
   <![endif]-->
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
@@ -191,7 +191,7 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">CADASTROS</li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-plus-square"></i> <span>Cadastros</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
@@ -199,7 +199,7 @@
               <li><a href="lista-categoria-atividades.html"><i class="fa fa-circle-o"></i>Categoria de Atividades</a></li>
               <li><a href="lista-categorias-despesa.html"><i class="fa fa-circle-o"></i>Categoria de despesas</a></li>
               <li><a href="lista-grupos.html"><i class="fa fa-circle-o"></i>Grupos</a></li>
-              <li class="active"><a href="lista-pessoas.html"><i class="fa fa-circle-o"></i>Pessoas</a></li>
+              <li><a href="lista-pessoas.html"><i class="fa fa-circle-o"></i>Pessoas</a></li>
               <li><a href="lista-republicas.html"><i class="fa fa-circle-o"></i>República</a></li>
           </ul>
         </li>
@@ -226,12 +226,12 @@
             </ul>
           </li>
 
-            <li class="treeview">
+            <li class="active treeview">
               <a href="#">
                 <i class="fa  fa-thumbs-down"></i> <span>Multas</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                  <li><a href="aprovar-multas.html"><i class="fa fa-circle-o"></i>Aprovar multas</a></li>
+                  <li class="active"><a href="aprovar-multas.html"><i class="fa fa-circle-o"></i>Aprovar multas</a></li>
                   <li><a href="lancar-multas.html"><i class="fa fa-circle-o"></i>Lançar multas</a></li>
               </ul>
             </li>
@@ -290,39 +290,38 @@
                     </thead>
                     <tbody>
                     <tr>
-                      <td>Não guardou a louça</td>
+                      <td>Esqueceu de tirar o lixo</td>
                       <td>Letícia</td>
 					  <td>5,00</td>
-                      <td>Pendente</td>
+                      <td><span class="label label-warning">Pendente</span></td>
                       <td>
-                        <button type="button" class="btn  btn-success">Editar</button>
+                        <button type="button" class="btn  btn-primary">Editar</button>
                         <button type="button" class="btn  btn-success">Aprovar</button>
-						<button type="button" class="btn  btn-danger">Excluir</button>
+						<button type="button" class="btn  btn-danger">Cancelar</button>
                       </td>
                     </tr>
                     <tr>
-                       <td>Não limpou o comodo</td>
+                       <td>Esqueceu de guardar as vasilhas</td>
                       <td>Larissa</td>
 					  <td>5,00</td>
-                      <td>Aprovada</td>
+                      <td><span class="label label-success">Aprovada</span></td>
                       </td>
                     </tr>
                     <tr>
                       <td>Não lavou a louça</td>
                       <td>Philippe</td>
 					  <td>5,00</td>
-					  <td>Cancelada</td>
+					  <td><span class="label label-danger">Cancelada</span></td>
                       <td>
-                        <button type="button" class="btn  btn-success">Editar</button>
-                        <button type="button" class="btn  btn-danger">Excluir</button>
+                        <button type="button" class="btn  btn-primary">Editar</button>
                       </td>
                     </tr>
                     <tr>
                       <tr>
-                        <td>Não tirou o lixo</td>
+                        <td>Não limpou o cômodo</td>
                         <td>Gleibson</td>
 						<td>5,00</td>
-						<td>Aprovada</td>
+					<td><span class="label label-success">Aprovada</span></td>
                         </td>
                       </tr>
                   </tfoot>
