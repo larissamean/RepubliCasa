@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>RepubliCasa | Cadastro de República</title>
+  <title>RepubliCasa | Cadastro de Categoria de Atividades</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -68,11 +68,11 @@
             <i class="fa fa-plus-square"></i> <span>Cadastros</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-              <li><a href="lista-categoria-atividades.html"><i class="fa fa-circle-o"></i>Categoria de Atividades</a></li>
+              <li class="active"><a href="lista-categoria-atividades.html"><i class="fa fa-circle-o"></i>Categoria de Atividades</a></li>
               <li><a href="lista-categorias-despesa.html"><i class="fa fa-circle-o"></i>Categoria de despesas</a></li>
               <li><a href="lista-grupos.html"><i class="fa fa-circle-o"></i>Grupos</a></li>
               <li><a href="lista-pessoas.html"><i class="fa fa-circle-o"></i>Pessoas</a></li>
-              <li class="active"><a href="lista-republicas.html"><i class="fa fa-circle-o"></i>República</a></li>
+              <li><a href="lista-republicas.html"><i class="fa fa-circle-o"></i>República</a></li>
           </ul>
         </li>
 
@@ -107,12 +107,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Cadastro de República
+        Cadastro de Categoria de Atividades
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Index</a></li>
         <li><a href="#">Cadastros</a></li>
-        <li class="active">Cadastro de República</li>
+        <li class="active">Cadastro de Categoria de Atividades</li>
       </ol>
     </section>
 
@@ -127,7 +127,7 @@
             <div class="col-xs-12">
               <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Lista de Repúblicas</h3>
+              <h3 class="box-title">Lista de Categoria de Atividades</h3>
 
             </div>
 
@@ -136,33 +136,40 @@
 
               <div>
 
-                <button type="submit" class="btn  btn-success" onclick="location.href='cadastro-republica.html'" >Adicionar</button>
+                <button type="submit" class="btn  btn-success" onclick="location.href='cadastro-categoria-atividade.html'" >Adicionar</button>
               </div>
               <table id="lista" class="table table-bordered table-striped">
                 <thead>
                     <thead>
                     <tr>
                       <th>Nome</th>
-                      <th>Ações</th>
+                      <th width="20%">Ações</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                      <td>República 1</td>
+                      <td>Limpeza da Casa</td>
                       <td>
                         <button type="button" class="btn  btn-success">Editar</button>
                         <button type="button" class="btn  btn-danger">Excluir</button>
                       </td>
                     </tr>
                     <tr>
-                      <td>República 2</td>
+                      <td>Despesas</td>
                       <td>
                         <button type="button" class="btn  btn-success">Editar</button>
                         <button type="button" class="btn  btn-danger">Excluir</button>
                       </td>
                     </tr>
                     <tr>
-                      <td>República 3</td>
+                      <td>Lixo</td>
+                      <td>
+                        <button type="button" class="btn  btn-success">Editar</button>
+                        <button type="button" class="btn  btn-danger">Excluir</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Panos de chão</td>
                       <td>
                         <button type="button" class="btn  btn-success">Editar</button>
                         <button type="button" class="btn  btn-danger">Excluir</button>
